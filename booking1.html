@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Studio Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }       
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }       
+        main {
+            padding: 20px;
+        }        
+        .booking-form {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }        
+        h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }        
+        input, select, textarea, button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }       
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }      
+        .confirmation-message {
+            text-align: center;
+            background-color: #dff0d8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Photo Studio Booking</h1>
+        <p>Book your photography session with us!</p>
+    </header>
+    <main>
+        <section class="booking-form">
+            <form id="bookingForm" action="submit_booking.php" method="POST">
+                <h2>Choose Your Service</h2>
+                <select id="service" name="service" required>
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="wedding">Wedding Photography</option>
+                    <option value="portrait">Portrait Session</option>
+                    <option value="event">Event Photography</option>
+                    <option value="prewedding">Prewedding Photography</option>
+                    <option value="product">Product Photography</option>
+                    <option value="commercial">Commercial Photography</option>
+                    <option value="fineart">Fine Art Photography</option>
+                    <option value="newborn">Newborn Photography</option>
+                    <option value="pet">Pet Photography</option>
+                    <option value="fancy">Fancy Photography</option>
+                    <option value="corporate">Corporate Photography</option>
+                    <option value="school">School & Graduate Photography</option>
+                    <option value="virtual">Virtual Photography</option>
+                    <option value="sport">Sport & Action Photography</option>
+                    <option value="travel">Travel & Destination Photography</option>
+                    <option value="Studio">Studio Rentals Photography</option>
+                    <option value="framing">Custom Prints & Framing </option>
+                </select>
+                <h2>Select Date and Time</h2>
+                <input type="date" id="date" name="date" required>
+                <input type="time" id="time" name="time" required>
+                <input type="text" id="venue" name="venue" placeholder="Venue" required>
+                <h2>Your Information</h2>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone" required>
+                <h2>Special Requests (Optional)</h2>
+                <textarea id="requests" name="requests" placeholder="Any special requests or notes"></textarea>
+                <h4 style= "color:red";>*Terms and Conditions Applied</h4>
+                <button type="submit"> Confirm Your Booking </button>
+            </form>
+        </section>
+        <div id="confirmationMessage" class="confirmation-message" style="display:none;">
+            <h3>Booking Confirmed!</h3>
+            <p>Thank you for booking with us and Trusting SS Photography.</p>
+        </div>
+    </main> 
+    <footer>
+        <p>© 2025 Photo Studio</p>
+    </footer>   
+</body>
+</html>
